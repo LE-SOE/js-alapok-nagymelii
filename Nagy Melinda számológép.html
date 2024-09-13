@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számológép</title>
+    <script>
+        function osszead() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            let eredmeny = a + b;
+            alert(`Az eredmény: ${eredmeny}`);
+            document.getElementById("eredmeny").innerText = eredmeny;
+        }
+
+        function kivon() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            let eredmeny = a - b;
+            alert(`Az eredmény: ${eredmeny}`);
+            document.getElementById("eredmeny").innerText = eredmeny;
+        }
+
+        function szoroz() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            let eredmeny = a * b;
+            alert(`Az eredmény: ${eredmeny}`);
+            document.getElementById("eredmeny").innerText = eredmeny;
+        }
+    </script>
+</head>
+<body>
+    <input id="a" type="number"> 
+    <input id="b" type="number">
+    <br><br>
+    <button onclick="osszead()">Összeadás</button>
+    <button onclick="kivon()">Kivonás</button>
+    <button onclick="szoroz()">Szorzás</button>
+    <br><br>
+    <span id="eredmeny">EREDMENY</span>
+</body>
+</html>
